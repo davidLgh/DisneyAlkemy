@@ -1,0 +1,572 @@
+{
+	"info": {
+		"_postman_id": "1485679b-2fb9-4994-b721-1536ee01e233",
+		"name": "DisneyAlkemy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19056843"
+	},
+	"item": [
+		{
+			"name": "Characters",
+			"item": [
+				{
+					"name": "characters/all",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY1OTUxMTM4NiwiaWF0IjoxNjU5NDc1Mzg2fQ.hiVlxMq800zbE0Tu9UNk1hQJPoKTT0ixKU8hOs8fAs4",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/characters",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"characters"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "characters?filters",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY1OTUxMTM4NiwiaWF0IjoxNjU5NDc1Mzg2fQ.hiVlxMq800zbE0Tu9UNk1hQJPoKTT0ixKU8hOs8fAs4",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/characters?age=unknow",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"characters"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Simba",
+									"disabled": true
+								},
+								{
+									"key": "age",
+									"value": "unknow"
+								},
+								{
+									"key": "weigth",
+									"value": "70",
+									"disabled": true
+								},
+								{
+									"key": "movies",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "characters/id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY1OTUxMTM4NiwiaWF0IjoxNjU5NDc1Mzg2fQ.hiVlxMq800zbE0Tu9UNk1hQJPoKTT0ixKU8hOs8fAs4",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/characters/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"characters",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "characters",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY1OTUxMTM4NiwiaWF0IjoxNjU5NDc1Mzg2fQ.hiVlxMq800zbE0Tu9UNk1hQJPoKTT0ixKU8hOs8fAs4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"img\": \"src/picure.jpg\",\r\n    \"name\": \"Neutron\",\r\n    \"age\": \"Unknow\",\r\n    \"weight\": 70,\r\n    \"history\": \"Neutron nace en el Monte Olimpo con todos los poderes de un dios..\"    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/characters",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"characters"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "characters/id",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY1OTUxMTM4NiwiaWF0IjoxNjU5NDc1Mzg2fQ.hiVlxMq800zbE0Tu9UNk1hQJPoKTT0ixKU8hOs8fAs4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"img\": \"src/images/picture.jpg\",\r\n    \"name\": \"Puca\",\r\n    \"age\": \"15\",\r\n    \"weight\": 15,\r\n    \"history\": \"Puca quiere a Garu, divertido amor, comen fideos...\"\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/characters/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"characters",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "characters/id",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY1OTUxMTM4NiwiaWF0IjoxNjU5NDc1Mzg2fQ.hiVlxMq800zbE0Tu9UNk1hQJPoKTT0ixKU8hOs8fAs4",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/characters/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"characters",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Movies",
+			"item": [
+				{
+					"name": "movies?filters",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/movies?order=DESC&genre=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"movies"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "una peli",
+									"disabled": true
+								},
+								{
+									"key": "order",
+									"value": "DESC"
+								},
+								{
+									"key": "genre",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "movies",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/movies",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"movies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "movies/id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/movies/29",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"movies",
+								"29"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "movies",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjEiLCJleHAiOjE2NTk2MDUyOTQsImlhdCI6MTY1OTU2OTI5NH0.xxlz2S5dBXTDoGecyv4dhA02xjROPB93OG_wF9sIyQo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"img\": \"/usr/tmp/img2.jpg\",\r\n    \"title\": \"Pelicula para eliminar\",\r\n    \"premiereDate\": \"2022-11-30\",\r\n    \"score\": \"5\",\r\n    \"genreId\": 1,\r\n    \"characters\": [\r\n        {\r\n            \"img\": \"src/picure.jpg\",\r\n            \"name\": \"UnPersonaje1\",\r\n            \"age\": \"Unknow\",\r\n            \"weight\": 22,\r\n            \"history\": \"UnPersonaje1\"\r\n        },\r\n        {\r\n            \"img\": \"src/picure.jpg\",\r\n            \"name\": \"UnPersonaje2\",\r\n            \"age\": \"Unknow\",\r\n            \"weight\": 30,\r\n            \"history\": \"UnPersonaje2\"\r\n        },\r\n        {\r\n            \"img\": \"src/picure.jpg\",\r\n            \"name\": \"UnPersonaje3\",\r\n            \"age\": \"Unknow\",\r\n            \"weight\": 30,\r\n            \"history\": \"UnPersonaje3\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/movies",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"movies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "movies/id/characters",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"characters\": [\r\n        {\r\n            \"img\": \"src/picure.jpg\",\r\n            \"name\": \"PersonajeNuevo1\",\r\n            \"age\": \"Unknow\",\r\n            \"weight\": 50,\r\n            \"history\": \"PersonajeNuevo1\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/movies/25/characters",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"movies",
+								"25",
+								"characters"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "movies/id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"img\": \"/src/images/Rey-Leon-2.jpg\",\r\n    \"title\": \"Rey Leon 2\",\r\n    \"premiereDate\": \"2022-11-28\",\r\n    \"score\": 5,\r\n    \"genreId\": 1\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/movies/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"movies",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "movies/id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/movies/29",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"movies",
+								"29"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "movies/id/characters/idCharacter",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/movies/25/characters/39",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"movies",
+								"25",
+								"characters",
+								"39"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Genders",
+			"item": [
+				{
+					"name": "genders",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"img\": \"src/img2.jpg\",\r\n    \"name\": \"Drama\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/genders",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"genders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "genders",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/genders",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"genders"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\" :\"admin1\",\r\n    \"password\" :\"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\" :\"admin1\",\r\n    \"password\" :\"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY1MzI5NzExOCwiaWF0IjoxNjUzMjYxMTE4fQ.mgs3nKwU1uB7yLxUHa34kIe1wpRf70rm5L8wHfnQ8Vs",
+								"type": "text"
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/auth/57",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"auth",
+								"57"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
